@@ -1,0 +1,30 @@
+# selenium_excel_reader
+reader for excel
+
+
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import xLs_utils.Xls_Reader;
+
+public class Signup {
+	
+	public static void  main() {
+	
+	WebDriver driver;
+	
+	System.setProperty("webdriver.chrome.driver", "/Users/avishw16/Downloads/chromedriver");
+	driver = new ChromeDriver();
+	
+	Xls_Reader reader = new Xls_Reader("/Users/avishw16/eclipse-workspace/Excel/src/testdata/firsDDT.xlsx");
+	
+	String firstname = reader.getCellData("Aditya", "First_name", 2);
+	System.out.println(firstname);
+	
+
+	
+	}
+
+}
